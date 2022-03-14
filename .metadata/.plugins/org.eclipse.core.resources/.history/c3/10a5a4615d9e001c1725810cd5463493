@@ -1,0 +1,23 @@
+package gs.apiredsocial.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import gs.apiredsocial.entity.Usuario;
+
+@RestController
+@RequestMapping("v1/users")
+public class UsuarioController {
+	
+	@GetMapping("/usuarios")
+	public <List> Usuario getAll() {
+		return;
+	}
+	
+	@GetMapping("detalle/{id}")
+	public Usuario datos() {
+		return;
+	}
+
+}

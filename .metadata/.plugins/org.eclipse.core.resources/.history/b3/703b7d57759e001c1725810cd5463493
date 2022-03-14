@@ -1,0 +1,29 @@
+package gs.apiredsocial.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import gs.apiredsocial.entity.Usuario;
+import gs.apiredsocial.service.UsuarioDaoImp;
+
+@RestController
+@RequestMapping("v1/users")
+public class UsuarioController {
+	
+	@Autowired
+	private UsuarioDaoImp usuarioService;
+	
+	@GetMapping("/lista")
+	public <List>Usuario getAllUsers() {
+		return usuarioService.findAll();
+	}
+	
+	@GetMapping("/detalle/{id}")
+	public Usuario datos(@PathVariable Long id) {
+		return usuarioService.findById(id);
+	}
+
+}

@@ -1,0 +1,34 @@
+server:
+  port: 8081
+  
+instance.id: ${random.value}
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true #registra ip no hostname
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    metadata-map:
+      instanceId: ${instance.id}
+      
+spring:
+  boot:
+      admin:
+         url: http://localhost:8090/
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: secret
+    url: jdbc:postgresql://localhost:5432/socialito
+
+  jpa:
+    hibernate:
+     ddl-auto: update
+     database-platform: org.hibernate.dialect.PostgreSQLDialect
+      #ddlAuto: validate
+      #namingStrategy: org.hibernate.cfg.EJB3NamingStrategy
+    show-sql: true      

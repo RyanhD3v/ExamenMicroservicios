@@ -1,0 +1,5 @@
+package gs.api.publication.service.remote;
+
+public interface PublicationSeviceRemote {
+
+}

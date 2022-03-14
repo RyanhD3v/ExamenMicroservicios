@@ -1,0 +1,5 @@
+package gs.apiredsocial.entity;
+
+public class Usuario {
+
+}

@@ -1,0 +1,10 @@
+package gs.api.comments.models;
+
+@Entity
+@Table(name = "comentario")
+public class Comentario {
+	
+	private Long id;
+	private String descripcion;
+
+}

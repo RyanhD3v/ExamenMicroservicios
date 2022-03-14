@@ -1,0 +1,9 @@
+package gs.apiredsocial.dao;
+
+
+import gs.apiredsocial.entity.Usuario;
+
+public interface UsuarioDao extends CrudRepository<Usuario, Long>{
+
+
+}

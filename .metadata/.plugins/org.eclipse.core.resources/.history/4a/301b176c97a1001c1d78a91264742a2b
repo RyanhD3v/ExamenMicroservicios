@@ -1,0 +1,10 @@
+package gs.api.comments.models.service;
+
+import java.util.List;
+
+public interface IComentarioService {
+
+	public List<Comentario> findAll();
+	public Comentario findById();
+	
+}

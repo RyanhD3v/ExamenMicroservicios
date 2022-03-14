@@ -1,0 +1,9 @@
+package gs.api.comments.controllers;
+
+@RestController
+@RequestMapping("/v1")
+public class ComentarioController {
+
+	private ComentarioDaoImp comentarioService;
+	
+}

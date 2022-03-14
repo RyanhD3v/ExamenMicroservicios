@@ -1,0 +1,14 @@
+package gs.apiredsocial.dao.imp;
+
+import java.util.List;
+
+import gs.apiredsocial.dao.UsuarioDao;
+import gs.apiredsocial.entity.Usuario;
+
+public interface UsuarioDaoImp{
+
+	
+	
+	
+
+}

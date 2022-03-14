@@ -1,0 +1,5 @@
+package gs.apiredsocial.dao.imp;
+
+public class UsuarioDaoImp {
+
+}

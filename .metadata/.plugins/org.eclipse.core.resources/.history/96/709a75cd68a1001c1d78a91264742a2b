@@ -1,0 +1,17 @@
+package gs.api.publication.clientes;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import gs.api.publication.entity.Publicacion;
+
+@FeignClient(name = "servicio-productos")
+public interface PublicacionClienteRest {
+	
+	public List<Publicacion> listar();
+	
+	public Publicacion detalle(@PathVariable Long id);
+
+}

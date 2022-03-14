@@ -1,0 +1,19 @@
+package gs.api.publication.service;
+
+import java.util.List;
+
+import gs.api.publication.entity.Publicacion;
+
+public class PublicacionServiceImp implements PublicacionService{
+
+	@Override
+	public List<Publicacion> findAll() {
+		return null;
+	}
+
+	@Override
+	public Publicacion findById(Long id, String descripcion) {
+		return null;
+	}
+
+}

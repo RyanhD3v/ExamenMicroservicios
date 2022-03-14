@@ -1,0 +1,5 @@
+package gs.apiredsocial.controller;
+
+public class UsuarioController {
+
+}

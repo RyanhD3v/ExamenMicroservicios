@@ -1,0 +1,30 @@
+package gs.apiredsocial.entity.modelo;
+
+public class Publication {
+	
+	private Long id;
+	private String animo;
+	private String descripcion;
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getAnimo() {
+		return animo;
+	}
+	public void setAnimo(String animo) {
+		this.animo = animo;
+	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	
+	
+
+}

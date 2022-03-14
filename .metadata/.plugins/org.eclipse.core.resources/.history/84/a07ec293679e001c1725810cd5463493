@@ -1,0 +1,18 @@
+package gs.apiredsocial.dao.imp;
+
+import java.util.List;
+
+import gs.apiredsocial.entity.Usuario;
+
+public interface UsuarioDaoImp{
+	
+	public List<Usuario> findAll();
+	public Usuario fingById(long id);
+	Usuario save(Usuario user);
+	void delete(long id);
+
+	
+	
+	
+
+}

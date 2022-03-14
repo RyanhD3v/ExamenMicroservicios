@@ -1,0 +1,7 @@
+package gs.apiredsocial.service;
+
+public interface UsuarioService {
+	
+	
+
+}

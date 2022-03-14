@@ -1,0 +1,6 @@
+package gs.api.publication.clientes;
+
+public class PublicacionClienteRest {
+	
+
+}

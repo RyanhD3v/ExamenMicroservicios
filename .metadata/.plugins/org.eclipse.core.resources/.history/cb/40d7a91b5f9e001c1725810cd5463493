@@ -1,0 +1,15 @@
+package gs.apiredsocial.dao;
+
+import java.util.List;
+
+import gs.apiredsocial.entity.Usuario;
+
+public interface UsuarioDao {
+
+
+	List <Usuario> getAll();
+	Usuario get(long id);
+	Usuario register(Usuario usuario);
+	void delete(long id);
+
+}

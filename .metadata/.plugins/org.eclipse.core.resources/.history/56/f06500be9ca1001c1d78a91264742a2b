@@ -1,0 +1,11 @@
+package gs.api.comments.controllers;
+
+import gs.api.comments.models.dao.ComentarioDao;
+
+@RestController
+@RequestMapping("/v1")
+public class ComentarioController {
+
+	private ComentarioDao comentarioService;
+	
+}

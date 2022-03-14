@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "122cccc8-c720-4eab-953e-00486322e0d7",
+		"name": "ExamenMicroservicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "AgregarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"Juan\",\n    \"apellido\": \"Barralez\",\n    \"pais\":\"Colombia\",\n    \"correo\": \"nestor@example.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8075/v1/users/agregar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"v1",
+								"users",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BorrarUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8075/v1/users/borrar/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"v1",
+								"users",
+								"borrar",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8075/v1/users/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"v1",
+								"users",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\":\"Nestor modificado\",\n    \"apellido\": \"Barralez modificado\",\n    \"pais\":\"Mexico\",\n    \"correo\": \"nestor@modificado.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8075/v1/users/editar/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"v1",
+								"users",
+								"editar",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UsuarioXId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8075/v1/users/detalle/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8075",
+							"path": [
+								"v1",
+								"users",
+								"detalle",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Publicaciones",
+			"item": [
+				{
+					"name": "CrearPublicacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"animo\": \"Se siente molesto\",\n    \"descripcion\":\"publicacion nueva\",\n    \"id_user\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/v1/publication/agregar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v1",
+								"publication",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PublicacionXId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/v1/publication/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v1",
+								"publication",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPublicacion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"animo\": \"Se siente enojado\",\n    \"descripcion\":\"Modificando la publicacion \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/v1/publication/editar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v1",
+								"publication",
+								"editar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPublicacion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/v1/publication/borrar/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v1",
+								"publication",
+								"borrar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comentarios",
+			"item": [
+				{
+					"name": "AgregarComentario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcion\":\"nuevo comentario\",\n    \"id_publicacion\":3,\n    \"id_usuario\":2\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/v1/coments/agregar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"coments",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarComentario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcion\":\"actualizacion de comentario mediante metodo put\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/v1/coments/editar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"coments",
+								"editar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ComentarioXId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/v1/coments/detalle/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"coments",
+								"detalle",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

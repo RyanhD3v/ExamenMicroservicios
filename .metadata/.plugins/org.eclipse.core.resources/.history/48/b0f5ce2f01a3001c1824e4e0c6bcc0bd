@@ -1,0 +1,5 @@
+package gs.apiredsocial.entity.modelo;
+
+public class Publication {
+
+}

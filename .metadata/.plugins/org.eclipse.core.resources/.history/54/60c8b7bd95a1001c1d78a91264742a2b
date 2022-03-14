@@ -1,0 +1,5 @@
+package gs.api.comments.models.dao;
+
+public interface ComentarioDao extends CrudRepository<Comentario, Long>{
+
+}

@@ -1,0 +1,70 @@
+version: '3.3'
+services:
+#  server-discovery:
+#    image: ryanhd3v/server-discovery:0.0.1-snapshot
+#    ports:
+#     - 8761:8761
+
+  server-admin:
+    image: ryanhd3v/server-admin:0.0.1-snapshot
+    ports:
+     - 8091:8091
+
+  postgres-service:
+    build: servicesData/postgresdb/
+    environment:
+      - POSTGRES_PASSWORD=secret
+    ports:
+      - 5432:5432
+    volumes:
+      - ./blockstorage/postgres:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3.6.12-management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+#  api-red-user:
+#    image: ryanhd3v/api-red-user:0.0.1-snapshot
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-service:5432/socialito
+#      - SPRING_DATASOURCE_USERNAME=postgres
+#      - SPRING_DATASOURCE_PASSWORD=secret
+#      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+#    ports:
+#      - "8075:8075"
+#    depends_on:
+#      - server-discovery
+#      - postgres-service
+
+#  api-red-publication:
+#    image: ryanhd3v/api-red-publication:0.0.1-snapshot
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-service:5432/socialito
+#      - SPRING_DATASOURCE_USERNAME=postgres
+#      - SPRING_DATASOURCE_PASSWORD=secret
+#      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+#    ports:
+#      - "8090:8090"
+#    depends_on:
+#      - server-discovery
+#      - postgres-service
+
+#  api-red-comment:
+#    image: ryanhd3v/api-red-comment:0.0.1-snapshot
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-service:5432/socialito
+#      - SPRING_DATASOURCE_USERNAME=postgres
+#      - SPRING_DATASOURCE_PASSWORD=secret
+#      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
+#    ports:
+#      - "8085:8085"
+#    depends_on:
+#      - server-discovery
+#      - postgres-service
+
+
+
+
+

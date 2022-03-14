@@ -1,0 +1,24 @@
+package gs.api.publication.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import gs.api.publication.entity.Publicacion;
+
+@RestController
+public class PublicacionController {
+	
+	@GetMapping("/listar")
+	public List<Publicacion> listar(){
+		return publicacionService.findAll();
+	}
+	
+	public Publicacion detalle() {
+		return publicacionService.findById(id, descripcion);
+	}
+	
+	
+
+}

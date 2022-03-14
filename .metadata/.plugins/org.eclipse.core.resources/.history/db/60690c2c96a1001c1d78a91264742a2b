@@ -1,0 +1,12 @@
+package gs.api.comments.models;
+
+import javax.persistence.Entity;
+
+@Entity
+@Table(name = "comentario")
+public class Comentario {
+	
+	private Long id;
+	private String descripcion;
+
+}

@@ -1,0 +1,5 @@
+package gs.apiredsocial.service.remote.async;
+
+public class Consumer {
+
+}

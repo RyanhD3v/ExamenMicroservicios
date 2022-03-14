@@ -1,0 +1,5 @@
+package gs.api.publication.entity.dao;
+
+public interface PublicacionDao extends CrudRepository<Publicacion, Long>{
+
+}

@@ -1,0 +1,5 @@
+package gs.api.comments.models.service;
+
+public class ComentarioServiceImp {
+
+}

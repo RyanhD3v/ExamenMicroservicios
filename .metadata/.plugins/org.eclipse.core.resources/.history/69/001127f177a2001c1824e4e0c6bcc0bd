@@ -1,0 +1,7 @@
+package gs.api.publication.entity.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface PublicacionDao extends CrudRepository<Publicacion, Long>{
+
+}

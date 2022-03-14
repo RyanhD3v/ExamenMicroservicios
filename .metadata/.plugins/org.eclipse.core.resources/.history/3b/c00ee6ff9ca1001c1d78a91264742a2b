@@ -1,0 +1,15 @@
+package gs.api.comments.controllers;
+
+import gs.api.comments.models.dao.ComentarioDao;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+@RequestMapping("/v1")
+public class ComentarioController {
+
+	private ComentarioDao comentarioService;
+	
+}

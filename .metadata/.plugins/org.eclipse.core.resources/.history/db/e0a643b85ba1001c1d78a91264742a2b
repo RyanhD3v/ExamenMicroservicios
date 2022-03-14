@@ -1,0 +1,10 @@
+package gs.api.publication.entity;
+
+public class Publicacion {
+	
+	private long id;
+	private String animo;
+	private String descripcion;
+	
+
+}

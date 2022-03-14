@@ -1,0 +1,45 @@
+package gs.api.publication.entity;
+
+public class Publicacion {
+	
+	private Usuario usuario;
+
+	private long id;
+	private String descripcion;
+	
+	
+	
+	public Publicacion(Usuario usuario, long id, String descripcion) {
+		
+		this.usuario = usuario;
+		this.id = id;
+		this.descripcion = descripcion;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
+	public long getId() {
+		return id;
+	}
+	
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	
+	
+	
+
+}

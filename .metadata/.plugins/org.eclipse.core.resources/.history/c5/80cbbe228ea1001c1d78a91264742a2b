@@ -1,0 +1,30 @@
+package gs.api.publication.service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import gs.api.publication.clientes.PublicacionClienteRest;
+import gs.api.publication.entity.Publicacion;
+
+
+@Service("serviceFeign")
+public class PublicacionServiceImp implements PublicacionService{
+
+	@Autowired
+	private PublicacionClienteRest clienteFeign;
+	
+	@Override
+	public List<Publicacion> findAll() {
+		return clienteFeign.listar().stream().map(p -> new Publicacion()).collect(Collectors.toList());
+	}
+
+	@Override
+	public Publicacion findById(Long id) {
+		
+		return new Publicacion();
+	}
+
+}
